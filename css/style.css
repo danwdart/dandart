@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #909;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+header {
+    margin: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 150%;
+}
+
+section {
+    margin: 20px 10px;
+}
+
+a {
+    color: #909;
+    font-weight:bold;
+}
+
+a:visited {
+    color: #606;
+}
+
+img {
+    height: 200px;
+}
