@@ -1,0 +1,6 @@
+mixin menuitem-external(location)
+  li.nav-item
+    a.nav-link.btn.btn-sm(href=location,target='_blank')
+      if block
+        block
+      span &nbsp;↪
