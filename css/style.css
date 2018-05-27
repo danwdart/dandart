@@ -19,6 +19,11 @@ a:visited {
     color: purple;
 }
 
+a[target='_blank']:after {
+    font-size: 8px;
+    vertical-align: top;
+    content: '⇗';
+}
 
 .bg-primary {
     background-color: #ddd !important;
