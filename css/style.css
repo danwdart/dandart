@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Caudex');
+
+* {
+    font-family: 'Caudex', serif;
+} 
+
 body {
     background-color: #eee;
-}
-
-h1,h2,h3,h4,h5,h6,p,a {
-    font-family: sans-serif;
 }
 
 p, ul {
     margin: 0;
 }
+
+a,
+a:hover,
+a:active,
+a:visited {
+    color: purple;
+}
+
 
 .bg-primary {
     background-color: #ddd !important;
@@ -92,19 +102,6 @@ p, ul {
 .card .btn {
     border-radius: 0;
     line-height: 20px;
-}
-
-footer {
-    display: inline-block;
-    width: 100%;
-    background-color: white;
-    padding: 5px 5px 0 5px;
-    box-shadow: 3px 3px 5px #ccc;
-}
-
-footer p {
-    padding: 0;
-    margin: 0;
 }
 
 .bg-light {
