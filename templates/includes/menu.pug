@@ -1,9 +1,14 @@
 div
-  ul.navbar-nav
-    +menuitem('#intro') Intro
-    +menuitem('#ham') Ham Radio
-    +menuitem('#music') Music
-    +menuitem('#maths') Maths
+  ul.navbar-nav.px-3
+    +menuitem('Intro', true)
+      include ../pages/intro
+    +menuitem('Ham Radio')
+      include ../pages/ham
+    +menuitem('Music')
+      include ../pages/music
+    +menuitem('Maths')
+      include ../pages/maths   
     +menuitem-external('https://jolharg.com') Software
     +menuitem-external('https://tuxtor.blogspot.co.uk') Blog
-    +menuitem('#contact') Contact
+    +menuitem('Contact')
+      include ../pages/contact

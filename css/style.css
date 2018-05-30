@@ -31,6 +31,10 @@ a:visited {
     box-shadow: none;
 }
 
+.navbar-nav {
+    overflow: auto;
+}
+
 .nav-link:hover {
     transform: scale(1.1);
 }
@@ -39,21 +43,24 @@ a:visited {
     transition: all 0.5s ease-in-out !important;
 }
 
-.container-fluid {
-    margin-top: 60px;
-}
-
 @media(max-width: 576px) {
     .container-fluid {
         margin-top: 80px;
     }
 }
 
-.page {
-    display: none;
+.row {
+    margin: 0;
 }
 
-.page[data-active] {
+.page {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+input:checked + .page {
     display: block;
 }
 
