@@ -8,7 +8,6 @@ install:
 before_script:
   - npm run build
 script:
-  - npm test
 deploy:
   provider: pages
   skip-cleanup: true
