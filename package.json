@@ -6,7 +6,7 @@
   "scripts": {
     "build-template": "pug templates/index.pug -o .site",
     "copy-static": "mkdir -p .site && cp -r static/* .site/",
-    "build-css": "mkdir -p .site/css && uncss -H .site -C . -s node_modules/bootstrap/dist/css/bootstrap.min.css,css/style.css < .site/index.html > .site/css/style.css",
+    "build-css": "mkdir -p .site/css && uncss -H .site -C . -s https://fonts.googleapis.com/css?family=Caudex,node_modules/bootstrap/dist/css/bootstrap.min.css,css/style.css < .site/index.html > .site/css/style.css",
     "build": "npm run copy-static && npm run build-template && npm run build-css",
     "deploy": "npm run build && gh-pages -d .site",
     "start": "npm run build && serve .site"
