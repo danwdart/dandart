@@ -29,11 +29,11 @@
   },
   "homepage": "https://github.com/danwdart/dandart#readme",
   "devDependencies": {
-    "gh-pages": "^1.1.0",
+    "gh-pages": "^1.2.0",
     "jstransformer-markdown-it": "^2.1.0",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6",
-    "serve": "^7.1.4",
+    "serve": "^7.2.0",
     "uncss": "^0.16.2"
   },
   "dependencies": {
