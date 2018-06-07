@@ -2,6 +2,10 @@
     font-family: 'Caudex', serif;
 } 
 
+html {
+    background: repeating-linear-gradient(-45deg, #ddd, #eee 5px, #eee 5px);
+}
+
 body {
     background-color: #eee;
 }
@@ -56,7 +60,6 @@ a:visited {
     position: absolute;
     width: 100%;
     left: 0;
-    background: repeating-linear-gradient(-45deg, #ddd, #eee 5px, #eee 5px);
 }
 
 input:checked + .page {
