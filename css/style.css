@@ -42,7 +42,7 @@ a:visited {
 }
 
 .nav-link {
-    transition: all 0.5s ease-in-out !important;
+    transition: transform 0.5s ease-in-out !important;
 }
 
 @media(max-width: 576px) {
@@ -62,7 +62,12 @@ a:visited {
     left: 0;
 }
 
-input:checked + .page {
+input:checked ~ label > a {
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+input:checked ~ .page {
     display: block;
 }
 
