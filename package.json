@@ -6,7 +6,7 @@
   "scripts": {
     "build-template": "pug templates/index.pug -o .site",
     "copy-static": "mkdir -p .site && cp -r static/* .site/",
-    "build-css": "mkdir -p .site/css && uncss -H .site -C . -s https://fonts.googleapis.com/css?family=Caudex,node_modules/bootstrap/dist/css/bootstrap.min.css,css/style.css < .site/index.html > .site/css/style.css",
+    "build-css": "mkdir -p .site/css && uncss -H .site -C . -s https://fonts.googleapis.com/css?family=Caudex,node_modules/bootstrap/dist/css/bootstrap.min.css,node_modules/jolharg-theme/css/style.css,css/style.css < .site/index.html > .site/css/style.css",
     "build": "npm run copy-static && npm run build-template && npm run build-css",
     "deploy": "npm run build && gh-pages -d .site",
     "start": "npm run build && serve .site"
@@ -33,12 +33,13 @@
     "jstransformer-markdown-it": "^2.1.0",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6",
-    "serve": "^8.1.1",
     "uncss": "^0.16.2"
   },
   "dependencies": {
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.1.2",
+    "jolharg-theme": "git+ssh://git@github.com/danwdart/jolharg-theme.git",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+    "serve": "^9.2.0"
   }
 }
