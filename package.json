@@ -6,7 +6,7 @@
   "scripts": {
     "build-template": "pug templates/index.pug -o .site",
     "copy-static": "mkdir -p .site && cp -r static/* .site/",
-    "build-css": "mkdir -p .site/css && uncss -H .site -C . -s https://fonts.googleapis.com/css?family=Caudex,node_modules/bootstrap/dist/css/bootstrap.min.css,node_modules/jolharg-theme/css/style.css,css/style.css < .site/index.html > .site/css/style.css",
+    "build-css": "mkdir -p .site/css && uncss -H .site -C . -s https://fonts.googleapis.com/css?family=Caudex,node_modules/bootstrap/dist/css/bootstrap.min.css,node_modules/@jolharg/website-theme/css/style.css,css/style.css < .site/index.html > .site/css/style.css",
     "build": "npm run copy-static && npm run build-template && npm run build-css",
     "deploy": "npm run build && gh-pages -d .site",
     "start": "npm run build && serve .site"
@@ -36,10 +36,10 @@
     "uncss": "^0.16.2"
   },
   "dependencies": {
-    "bootstrap": "^4.1.2",
     "@jolharg/website-theme": "^0.0.1",
+    "bootstrap": "^4.1.3",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
-    "serve": "^9.2.0"
+    "serve": "^9.4.0"
   }
 }
