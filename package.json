@@ -4,11 +4,11 @@
   "description": "Dan Dart's Web Site",
   "main": "js/index.js",
   "scripts": {
-    "build-template": "pug templates/index.pug -o .site",
-    "copy-static": "mkdir -p .site && cp -r static/* .site/",
+    "build:static": "mkdir -p .site && cp -r static/* .site/",
     "get-external-font": "wget -4 -O external/caudex.css -c https://fonts.googleapis.com/css?family=Caudex",
-    "build-css": "mkdir -p .site/css external && npm run get-external-font && uncss -H .site -C . -s external/caudex.css,node_modules/bootstrap/dist/css/bootstrap.min.css,node_modules/@jolharg/website-theme/css/style.css,css/style.css < .site/index.html > .site/css/style.css",
-    "build": "npm run copy-static && npm run build-template && npm run build-css",
+    "build:css": "mkdir -p .site/css external && npm run get-external-font && uncss -H .site -C . -s external/caudex.css,node_modules/bootstrap/dist/css/bootstrap.min.css,node_modules/@jolharg/website-theme/css/style.css,css/style.css < .site/index.html > .site/css/style.css",
+    "build:render": "pug templates/index.pug -o .site",
+    "build": "npm run build:static && npm run build:render && npm run build:css",
     "deploy": "npm run build && gh-pages -d .site",
     "start": "npm run build && serve .site"
   },
@@ -39,8 +39,6 @@
   "dependencies": {
     "@jolharg/website-theme": "^0.0.4",
     "bootstrap": "^4.1.3",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.5",
     "serve": "^10.0.0"
   }
 }
