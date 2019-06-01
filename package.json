@@ -34,7 +34,7 @@
     "jstransformer-markdown-it": "^2.1.0",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6",
-    "uncss": "^0.16.2"
+    "uncss": "^0.17.0"
   },
   "dependencies": {
     "@jolharg/website-theme": "^0.0.5",
