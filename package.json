@@ -4,13 +4,13 @@
   "description": "Dan Dart's Web Site",
   "main": "js/index.js",
   "scripts": {
-    "build:static": "mkdir -p .site && cp -r static/* .site/",
-    "get-external-font": "wget -4 -O external/caudex.css -c https://fonts.googleapis.com/css?family=Caudex",
-    "build:css": "mkdir -p .site/css external && npm run get-external-font && uncss -H .site -C . -s external/caudex.css,node_modules/bootstrap/dist/css/bootstrap.min.css,node_modules/@jolharg/website-theme/css/style.css,css/style.css < .site/index.html > .site/css/style.css",
+    "build:static": "mkdir -p .site && cp -r static/* .site/ && cp -r node_modules/@fortawesome/fontawesome-free/webfonts .site/",
+    "get-external-font": "wget -O external/caudex.css https://fonts.googleapis.com/css?family=Caudex",
+    "build:css": "mkdir -p .site/css external && npm run get-external-font && uncss -H .site -C . -s external/caudex.css,node_modules/bootstrap/dist/css/bootstrap.min.css,node_modules/@fortawesome/fontawesome-free/css/all.min.css,node_modules/@jolharg/website-theme/css/style.css,css/style.css < .site/index.html > .site/css/style.css",
     "build:render": "pug templates/index.pug -o .site",
-    "build": "npm run build:static && npm run build:render && npm run build:css",
+    "build": "npm run build:static && npm run build:render && npm run build:css && echo Done",
     "deploy": "npm run build && gh-pages -d .site",
-    "start": "npm run build && serve .site"
+    "start": "npm run build && serve -d -n -s .site"
   },
   "repository": {
     "type": "git",
@@ -32,13 +32,16 @@
   "devDependencies": {
     "gh-pages": "^2.0.1",
     "jstransformer-markdown-it": "^2.1.0",
-    "pug": "^2.0.3",
+    "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6",
     "uncss": "^0.17.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "@jolharg/website-theme": "^0.0.5",
     "bootstrap": "^4.3.1",
-    "serve": "^11.0.0"
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "serve": "^11.1.0"
   }
 }
